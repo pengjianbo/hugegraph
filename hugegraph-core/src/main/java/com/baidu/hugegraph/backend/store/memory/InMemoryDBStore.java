@@ -373,12 +373,14 @@ public abstract class InMemoryDBStore
 
         @Override
         public boolean supportsQueryWithContains() {
-            return true;
+            // NOTE: hasValue tests will skip
+            return false;
         }
 
         @Override
         public boolean supportsQueryWithContainsKey() {
-            return true;
+            // NOTE: hasKey tests will skip
+            return false;
         }
 
         @Override
@@ -398,12 +400,12 @@ public abstract class InMemoryDBStore
 
         @Override
         public boolean supportsUpdateVertexProperty() {
-            return true;
+            return false;
         }
 
         @Override
         public boolean supportsMergeVertexProperty() {
-            return true;
+            return false;
         }
 
         @Override
